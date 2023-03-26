@@ -2,6 +2,7 @@ package com.fernandes.cleanarch.entrypoint.controller.mapper;
 
 import com.fernandes.cleanarch.core.domain.Customer;
 import com.fernandes.cleanarch.entrypoint.controller.request.CustomerRequest;
+import com.fernandes.cleanarch.entrypoint.controller.response.CustomerResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -12,4 +13,7 @@ public interface CustomerMapper {
     @Mapping(target = "Address", ignore = true)
     @Mapping(target = "isValidCpf", ignore = true)
     Customer toCustomer(CustomerRequest customerRequest);
+
+    @Mapping(target = "id", ignore = true)
+    CustomerResponse toCustomerResponse(Customer customer);
 }
