@@ -1,4 +1,4 @@
-package com.fernandes.cleanarch.dataprovider.repository;
+package com.fernandes.cleanarch.dataprovider;
 
 import com.fernandes.cleanarch.core.dataprovider.FindAddressByZipCode;
 import com.fernandes.cleanarch.core.domain.Address;
