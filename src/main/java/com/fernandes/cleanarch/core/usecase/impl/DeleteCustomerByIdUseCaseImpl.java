@@ -1,24 +1,24 @@
 package com.fernandes.cleanarch.core.usecase.impl;
 
 import com.fernandes.cleanarch.core.dataprovider.DeleteCustomerById;
-import com.fernandes.cleanarch.core.dataprovider.FindCustomerById;
 import com.fernandes.cleanarch.core.usecase.DeleteCustomerByIdUseCase;
+import com.fernandes.cleanarch.core.usecase.FindCustomerByIdUseCase;
 
 public class DeleteCustomerByIdUseCaseImpl implements DeleteCustomerByIdUseCase {
-    private final FindCustomerById findCustomerById;
+    private final FindCustomerByIdUseCase findCustomerByIdUseCase;
     private final DeleteCustomerById deleteCustomerById;
 
     public DeleteCustomerByIdUseCaseImpl(
-            FindCustomerById findCustomerById,
+            FindCustomerByIdUseCase findCustomerByIdUseCase,
             DeleteCustomerById deleteCustomerById
     ){
-        this.findCustomerById = findCustomerById;
+        this.findCustomerByIdUseCase = findCustomerByIdUseCase;
         this.deleteCustomerById = deleteCustomerById;
     }
 
     @Override
     public void delete(String id) {
-        findCustomerById.find(id);
+        findCustomerByIdUseCase.find(id);
         deleteCustomerById.delete(id);
     }
 }
