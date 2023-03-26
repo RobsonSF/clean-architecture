@@ -1,5 +1,6 @@
 package com.fernandes.cleanarch.entrypoint.controller;
 
+import com.fernandes.cleanarch.core.usecase.DeleteCustomerByIdUseCase;
 import com.fernandes.cleanarch.core.usecase.FindCustomerByIdUseCase;
 import com.fernandes.cleanarch.core.usecase.InsertCustomerUseCase;
 import com.fernandes.cleanarch.core.usecase.UpdateCustomerUseCase;
@@ -25,6 +26,9 @@ public class CustomerController {
     private UpdateCustomerUseCase updateCustomerUseCase;
 
     @Autowired
+    private DeleteCustomerByIdUseCase deleteCustomerByIdUseCase;
+
+    @Autowired
     private CustomerMapper customerMapper;
 
     @PostMapping
@@ -46,6 +50,12 @@ public class CustomerController {
         var customer = customerMapper.toCustomer(customerRequest);
         customer.setId(id);
         updateCustomerUseCase.update(customer, customerRequest.getZipCode());
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public  ResponseEntity<Void> delete(@PathVariable String id) {
+        deleteCustomerByIdUseCase.delete(id);
         return ResponseEntity.noContent().build();
     }
 }
