@@ -7,9 +7,9 @@ import com.fernandes.cleanarch.core.usecase.FindCustomerByIdUseCase;
 import com.fernandes.cleanarch.core.usecase.UpdateCustomerUseCase;
 
 public class UpdateCustomerUseCaseImpl implements UpdateCustomerUseCase {
-    private FindCustomerByIdUseCase findCustomerByIdUseCase;
-    private FindAddressByZipCode findAddressByZipCode;
-    private UpdateCustomer updateCustomer;
+    private final FindCustomerByIdUseCase findCustomerByIdUseCase;
+    private final FindAddressByZipCode findAddressByZipCode;
+    private final UpdateCustomer updateCustomer;
 
     public UpdateCustomerUseCaseImpl(
             FindCustomerByIdUseCase findCustomerByIdUseCase,

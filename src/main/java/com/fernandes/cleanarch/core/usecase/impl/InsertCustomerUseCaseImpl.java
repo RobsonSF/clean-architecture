@@ -6,8 +6,8 @@ import com.fernandes.cleanarch.core.domain.Customer;
 import com.fernandes.cleanarch.core.usecase.InsertCustomerUseCase;
 
 public class InsertCustomerUseCaseImpl implements InsertCustomerUseCase {
-    private FindAddressByZipCode findAddressByZipCode;
-    private InsertCustomer insertCustomer;
+    private final FindAddressByZipCode findAddressByZipCode;
+    private final InsertCustomer insertCustomer;
 
     public InsertCustomerUseCaseImpl(
             FindAddressByZipCode findAddressByZipCode,

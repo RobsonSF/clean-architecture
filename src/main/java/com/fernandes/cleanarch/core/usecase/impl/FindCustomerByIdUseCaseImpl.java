@@ -5,9 +5,9 @@ import com.fernandes.cleanarch.core.domain.Customer;
 import com.fernandes.cleanarch.core.usecase.FindCustomerByIdUseCase;
 
 public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
-    private FindCustomerById findCustomerById;
+    private final FindCustomerById findCustomerById;
 
-    FindCustomerByIdUseCaseImpl(FindCustomerById findCustomerById){
+    public FindCustomerByIdUseCaseImpl(FindCustomerById findCustomerById){
         this.findCustomerById = findCustomerById;
     }
 
