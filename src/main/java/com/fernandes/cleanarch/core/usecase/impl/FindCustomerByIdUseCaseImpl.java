@@ -14,6 +14,6 @@ public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
     @Override
     public Customer find(String id) {
         return findCustomerById.find(id)
-                .orElseThrow(() -> new RuntimeException("Customer not found!"))
+                .orElseThrow(() -> new RuntimeException("Customer not found!"));
     }
 }
