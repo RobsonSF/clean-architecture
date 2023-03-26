@@ -6,8 +6,9 @@ import com.fernandes.cleanarch.dataprovider.repository.CustomerRepository;
 import com.fernandes.cleanarch.dataprovider.repository.mapper.CustomerEntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
 
-@Document
+@Component
 public class UpdateCustomerImpl implements UpdateCustomer {
 
     @Autowired

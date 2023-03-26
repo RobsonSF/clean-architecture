@@ -5,9 +5,11 @@ import com.fernandes.cleanarch.core.domain.Customer;
 import com.fernandes.cleanarch.dataprovider.repository.CustomerRepository;
 import com.fernandes.cleanarch.dataprovider.repository.mapper.CustomerEntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
 public class FindCustomerByIdImpl implements FindCustomerById {
 
     @Autowired
