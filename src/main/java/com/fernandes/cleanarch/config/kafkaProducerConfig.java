@@ -1,7 +1,6 @@
 package com.fernandes.cleanarch.config;
 
-import com.fasterxml.jackson.databind.ser.std.StringSerializer;
-import org.springframework.boot.info.OsInfo;
+import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
@@ -24,8 +23,8 @@ public class kafkaProducerConfig {
         Map<String, Object>  configProps = new HashMap<>();
         configProps.put(BOOTSTRAP_SERVERS_CONFIG,"localhost:9092");
         configProps.put(GROUP_ID_CONFIG, "fernandes");
-        configProps.put(KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put(KEY_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        configProps.put(VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
