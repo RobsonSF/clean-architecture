@@ -2,6 +2,9 @@
 
 ##### Project developed for study, covering topics such as clean code, clean architecture, microservices, kafka, mongodb, docker, docker-compose
 
+##### Technologies used -> Java, Spring Cloud, Docker, MongoDB and Kafka
+
+
 ## Project taught by instructor [Danilo Arantes](https://www.linkedin.com/in/danilo-arantes-47172b158/), based on the helpdev project
 
 ### Uncomplicating Clean Architecture
