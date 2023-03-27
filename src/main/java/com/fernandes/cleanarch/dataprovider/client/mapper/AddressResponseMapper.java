@@ -4,7 +4,7 @@ import com.fernandes.cleanarch.core.domain.Address;
 import com.fernandes.cleanarch.dataprovider.client.response.AddressResponse;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "Spring")
+@Mapper(componentModel = "spring")
 public interface AddressResponseMapper {
-    Address toEntity(AddressResponse addressResponse);
+    Address toAddress(AddressResponse addressResponse);
 }

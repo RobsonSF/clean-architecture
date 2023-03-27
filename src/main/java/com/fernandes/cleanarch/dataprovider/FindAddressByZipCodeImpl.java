@@ -19,6 +19,6 @@ public class FindAddressByZipCodeImpl implements FindAddressByZipCode {
     @Override
     public Address find(String zipCode) {
         var addressResponse = findAddressByZipCodeClient.find(zipCode);
-        return addressResponseMapper.toEntity(addressResponse);
+        return addressResponseMapper.toAddress(addressResponse);
     }
 }
